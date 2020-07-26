@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNKNOWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myy-EV-lxK">
+                                <rect key="frame" x="111" y="429" width="192" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egj-8P-Iui">
+                                <rect key="frame" x="151.5" y="507" width="111.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ct-Ss-Lq4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="385"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tBe-ia-pwe" userLabel="Circle View">
+                                        <rect key="frame" x="79" y="64.5" width="256" height="256"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="256" id="1er-3T-ndO"/>
+                                            <constraint firstAttribute="width" constant="256" id="lfV-Ab-5JP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tBe-ia-pwe" firstAttribute="centerY" secondItem="8ct-Ss-Lq4" secondAttribute="centerY" id="XAY-rx-SX7"/>
+                                    <constraint firstItem="tBe-ia-pwe" firstAttribute="centerX" secondItem="8ct-Ss-Lq4" secondAttribute="centerX" id="XQp-5I-19y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="myy-EV-lxK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4Jr-Ke-KMP"/>
+                            <constraint firstItem="8ct-Ss-Lq4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Lq-2j-GkO"/>
+                            <constraint firstItem="Egj-8P-Iui" firstAttribute="centerX" secondItem="myy-EV-lxK" secondAttribute="centerX" id="5mO-jx-Snx"/>
+                            <constraint firstItem="8ct-Ss-Lq4" firstAttribute="bottom" secondItem="myy-EV-lxK" secondAttribute="top" id="c9C-7Q-A0a"/>
+                            <constraint firstItem="Egj-8P-Iui" firstAttribute="top" secondItem="myy-EV-lxK" secondAttribute="bottom" constant="30" id="gDq-94-wrP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ct-Ss-Lq4" secondAttribute="trailing" id="jLe-qb-Cxj"/>
+                            <constraint firstItem="8ct-Ss-Lq4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qUk-cA-ZJE"/>
+                            <constraint firstItem="myy-EV-lxK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qVV-zJ-I3m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="circleView" destination="tBe-ia-pwe" id="6pa-6A-meh"/>
+                        <outlet property="distanceReading" destination="myy-EV-lxK" id="S3y-vx-dwm"/>
+                        <outlet property="nameLabel" destination="Egj-8P-Iui" id="tEh-9n-DfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
